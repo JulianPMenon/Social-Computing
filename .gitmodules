@@ -1,0 +1,3 @@
+[submodule "yars"]
+	path = yars
+	url = https://github.com/datavorous/yars.git
