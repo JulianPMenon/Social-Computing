@@ -1,17 +1,25 @@
 import json
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import sys
 
+if len(sys.argv) < 2:
+    raise ValueError("Please pass the city subreddit name as a command-line argument")
+CITY_SUBREDDIT = sys.argv[1]
 
 # Set this to your city subreddit name (case-sensitive, no /r/)
-CITY_SUBREDDIT = "pauper"
+#CITY_SUBREDDIT = "Hamburg"
 INPUT_FILE = f"{CITY_SUBREDDIT}_posts_text.json"
 OUTPUT_FILE = f"{CITY_SUBREDDIT}_posts_sentiment.json"
 
 
 # Load XLM-RoBERTa sentiment model
+from transformers import XLMRobertaTokenizer
 MODEL_NAME = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+tokenizer = XLMRobertaTokenizer.from_pretrained(MODEL_NAME)
+
+
+#tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=False)
 model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
 
 

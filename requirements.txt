@@ -1,0 +1,22 @@
+# Core ML/RL dependencies
+torch>=2.0
+torchvision
+numpy
+gymnasium
+transformers
+protobuf
+
+
+# Data scraping dependencies (from YARS)
+beautifulsoup4
+requests
+tqdm
+lxml
+html5lib
+
+# Optional: Utilities (if you use them)
+matplotlib
+ipython
+tiktoken
+collections
+sentencepiece

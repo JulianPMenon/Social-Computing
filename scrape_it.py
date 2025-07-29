@@ -2,11 +2,18 @@ import json
 import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
-from yars.yars import YARS
+
+# Add yars submodule to path
+script_dir = os.path.dirname(os.path.abspath(__file__))
+yars_path = os.path.join(script_dir, "yars", "yars")
+sys.path.insert(0, yars_path)
+
+from yars.src.yars.yars import YARS
 
 def main():
     yars = YARS()
-    subreddit = input("Enter subreddit name to scrape: ").strip()
+    subreddit = sys.argv[1] if len(sys.argv) > 1 else ""
+    #subreddit = input("Enter subreddit name to scrape: ").strip()
     if not subreddit:
         print("Error: No subreddit name provided. Exiting.")
         sys.exit(1)
