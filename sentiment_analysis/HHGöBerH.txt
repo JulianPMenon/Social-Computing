@@ -1,0 +1,5 @@
+	city	post_negative	post_neutral	post_positive	total_posts	comment_negative	comment_neutral	comment_positive	total_comments
+0	Berlin	108	363	29	500	24237	15673	8197	48107
+1	Hamburg	97	361	42	500	13111	9927	5037	28075
+2	Hannover	234	669	97	1000	8109	9615	5680	23404
+3	goettingen	99	338	63	500	1179	1754	1055	3988
