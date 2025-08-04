@@ -1,0 +1,21 @@
+# first get the geojson file for the administrative boarders from:
+https://overpass-turbo.eu/
+
+# using the request format:
+[out:json];
+relation["name"="Berlin"]["boundary"="administrative"];
+out geom;
+
+# use qgis to remove unwanted matches
+https://qgis.org/download/
+
+steps:
+Layer -> Layer hinzufügen -> Vectorlayer hinzufügen...
+mark "Datei", press the "..." button next to "Vektordatensätze" and chose the geojson file to edit. 
+Click "Hinzufügen" to load the file and close the context window.
+
+# finally insert the geojson into copernicus to download the cropped satellite image
+https://browser.dataspace.copernicus.eu
+
+
+
