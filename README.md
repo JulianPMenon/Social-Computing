@@ -1,2 +1,2 @@
 # Social-Computing
-Project on Reddit sentiment Analysis and City greenery korrelation for social computing
+This is our project on linking Reddit sentiment analysis with city greenery for the social computing course. See "final_presenation/final_presenation.ipynb" or the pdf version "final_presentation.pdf" for a presentation and summary of our work.
