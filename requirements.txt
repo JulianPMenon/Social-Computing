@@ -6,6 +6,9 @@ gymnasium
 transformers
 protobuf
 
+# Green scores calculation
+pillow
+
 
 # Data scraping dependencies (from YARS)
 beautifulsoup4
@@ -13,10 +16,13 @@ requests
 tqdm
 lxml
 html5lib
+json
 
-# Optional: Utilities (if you use them)
+# Utilities
+pandas
 matplotlib
 ipython
 tiktoken
 collections
 sentencepiece
+seaborn
